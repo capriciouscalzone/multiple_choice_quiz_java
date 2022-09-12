@@ -14,3 +14,11 @@ body {
 .hide {
     display: none;
 }
+
+.btn {
+    border: 1px solid darkblue;
+    background-color: violet;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
