@@ -22,3 +22,32 @@ body {
     padding: 5px;
     color: white;
 }
+
+.btn:hover {
+    border-color: aqua;
+}
+
+.btn-grid {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.choices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.time {
+    background-color: blue;
+    font-weight: bold;
+    border: 2px black;
+}
+
+.start-btn, .next-btn, .submit-btn {
+    font-size: large;
+    font-weight: bold;
+    padding: 10px 60px;
+}
