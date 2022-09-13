@@ -27,22 +27,22 @@ var questions = [
 
     },
     {
-        question:'',
+        question:'When did Java come to be?',
         answers: [
-            {text: '', correct:true },
-            {text:'' , correct:false },
-            {text: '', correct:false },
-            {text:'' , correct:false },
+            {text: '2001', correct:false },
+            {text: '1995' , correct:true },
+            {text: '1988', correct:false },
+            {text: '1979' , correct:false },
         ]
 
     },
     {
-        question:'',
+        question:'Which answer would you use for a timer?',
         answers: [
-            {text: '', correct:true },
-            {text: '', correct:false },
-            {text: '', correct:false },
-            {text: '', correct:false },
+            {text: 'setinterval', correct:true },
+            {text: 'timegogogo', correct:false },
+            {text: 'annnnnddddddddgonow!', correct:false },
+            {text: 'bbbbbyyyyeeeee', correct:false },
         ]
     }
 ]
