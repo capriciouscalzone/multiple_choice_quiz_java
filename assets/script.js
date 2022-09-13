@@ -65,3 +65,10 @@ function startTimer(duration, display){
         }
     }, 1000);
 }
+
+startBtn.addEventListner('click',startGame);
+startBtn.addEventListner('click',function(){
+    var twoMinutes = 60 * 2,
+    display = document.querySelector('#time');
+    startTimer(twoMinutes, display);
+});
