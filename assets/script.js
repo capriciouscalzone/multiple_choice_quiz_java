@@ -79,4 +79,8 @@ function startGame(){
 
     startBtn.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - .5);
+    questionContEl.classList.remove('hide');
+    currentQuestionIndex = 0;
+    nextQuestion();
+    nextBtn.classList.remove('hide')
 }
