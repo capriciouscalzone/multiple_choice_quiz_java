@@ -99,3 +99,11 @@ function ShowQuestion(question) {
         answerBtnsEl.appendChild(button)
     })
 }
+
+function resetState() {
+    clearStatusClass(document.body)
+    nextBtn.classList.add('hide')
+    while (answerBtnsEl.firstChild){
+        answerBtnsEl.removeChild(answerBtnsEl.firstChild)
+    }
+}
