@@ -30,7 +30,7 @@ body {
 .btn-grid {
     display: grid;
     gap: 10px;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .choices {
@@ -49,5 +49,5 @@ body {
 .start-btn, .next-btn, .submit-btn {
     font-size: large;
     font-weight: bold;
-    padding: 10px 60px;
+    padding: 15px 60px;
 }
