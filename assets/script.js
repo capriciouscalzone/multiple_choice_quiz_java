@@ -6,6 +6,8 @@ var answerBtnsEl = document.getElementById('answer-buttons')
 
 var score = 0;
 
+var shuffledQuestions, currentQuestionIndex;
+
 var questions = [
     {
         question: 'Which command can you use inside gitbash terminal?',
@@ -72,3 +74,9 @@ startBtn.addEventListner('click',function(){
     display = document.querySelector('#time');
     startTimer(twoMinutes, display);
 });
+
+function startGame(){
+
+    startBtn.classList.add('hide');
+    shuffledQuestions = questions.sort(() => Math.random() - .5);
+}
