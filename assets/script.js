@@ -46,3 +46,22 @@ var questions = [
         ]
     }
 ]
+
+startBtn.addEventListner('click',startGame);
+
+function startTimer(duration, display){
+    var timer = duration, minutes, seconds;
+    setInterval(function(){
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+        if(seconds === 0) {
+            alert('Game Over!')
+        }
+    }, 1000);
+}
