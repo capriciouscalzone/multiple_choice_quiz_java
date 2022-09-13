@@ -8,41 +8,41 @@ var score = 0;
 
 var questions = [
     {
-        question:
+        question: 'Which command can you use inside gitbash terminal?',
         answers: [
-            {text: , correct:true },
-            {text: , correct:false },
-            {text: , correct:false },
-            {text: , correct:false },
+            {text: 'git push' , correct:true },
+            {text: 'got get my code', correct:false },
+            {text: 'please do it for me' , correct:false },
+            {text: 'marry me', correct:false },
         ]
     },
     {
-        question:
+        question: 'Where did bootstrap originate from?',
         answers: [
-            {text: , correct:true },
-            {text: , correct:false },
-            {text: , correct:false },
-            {text: , correct:false },
-        ]
-
-    },
-    {
-        question:
-        answers: [
-            {text: , correct:true },
-            {text: , correct:false },
-            {text: , correct:false },
-            {text: , correct:false },
+            {text: 'NASA', correct:false },
+            {text: 'North Korea' , correct:false },
+            {text: 'Twitter' , correct:true },
+            {text: 'The Zuck' , correct:false },
         ]
 
     },
     {
-        question:
+        question:'',
         answers: [
-            {text: , correct:true },
-            {text: , correct:false },
-            {text: , correct:false },
-            {text: , correct:false },
+            {text: '', correct:true },
+            {text:'' , correct:false },
+            {text: '', correct:false },
+            {text:'' , correct:false },
+        ]
+
+    },
+    {
+        question:'',
+        answers: [
+            {text: '', correct:true },
+            {text: '', correct:false },
+            {text: '', correct:false },
+            {text: '', correct:false },
         ]
     }
 ]
