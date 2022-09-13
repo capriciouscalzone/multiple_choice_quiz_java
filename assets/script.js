@@ -1,21 +1,22 @@
-var startBtn = document.getElementById('start-btn');
-var nextBtn = document.getElementById('nxt-btn');
-var questionContEl = document.getElementById('questionBox')
-var questionEl = document.getElementById('question')
-var answerBtnsEl = document.getElementById('answer-buttons')
+const startButton = document.getElementById('start-btn');
+const nextButton = document.getElementById('next-btn');
+const questionsContainerEl = document.getElementById('questionCon')
+
+const questionElement = document.getElementById('question')
+const answerButtonsElement = document.getElementById('answer-buttons')
 
 var score = 0;
 
-var shuffledQuestions, currentQuestionIndex;
+let shuffledQuestions, currentQuestionIndex;
 
-var questions = [
+const questions = [
     {
         question: 'Which command can you use inside gitbash terminal?',
         answers: [
-            {text: 'git push' , correct:true },
-            {text: 'got get my code', correct:false },
-            {text: 'please do it for me' , correct:false },
-            {text: 'marry me', correct:false },
+            {text: 'git push' , correct: true },
+            {text: 'got get my code', correct: false },
+            {text: 'please do it for me' , correct: false },
+            {text: 'marry me', correct: false }
         ]
     },
     {
@@ -24,7 +25,7 @@ var questions = [
             {text: 'NASA', correct:false },
             {text: 'North Korea' , correct:false },
             {text: 'Twitter' , correct:true },
-            {text: 'The Zuck' , correct:false },
+            {text: 'The Zuck' , correct:false }
         ]
 
     },
@@ -34,7 +35,7 @@ var questions = [
             {text: '2001', correct:false },
             {text: '1995' , correct:true },
             {text: '1988', correct:false },
-            {text: '1979' , correct:false },
+            {text: '1979' , correct:false }
         ]
 
     },
@@ -44,18 +45,23 @@ var questions = [
             {text: 'setinterval', correct:true },
             {text: 'timegogogo', correct:false },
             {text: 'annnnnddddddddgonow!', correct:false },
-            {text: 'bbbbbyyyyeeeee', correct:false },
+            {text: 'bbbbbyyyyeeeee', correct:false }
         ]
     }
 ]
 
-startBtn.addEventListner('click',startGame);
+startButton.addEventListener('click',startGame);
+
+
 
 function startTimer(duration, display){
     var timer = duration, minutes, seconds;
     setInterval(function(){
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
 
@@ -68,8 +74,8 @@ function startTimer(duration, display){
     }, 1000);
 }
 
-startBtn.addEventListner('click',startGame);
-startBtn.addEventListner('click',function(){
+startButton.addEventListener('click',startGame);
+startButton.addEventListener('click', function(){
     var twoMinutes = 60 * 2,
     display = document.querySelector('#time');
     startTimer(twoMinutes, display);
@@ -77,18 +83,18 @@ startBtn.addEventListner('click',function(){
 
 function startGame(){
 
-    startBtn.classList.add('hide');
+    startButton.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - .5);
-    questionContEl.classList.remove('hide');
+    questionsContainerEl.classList.remove('hide');
     currentQuestionIndex = 0;
     nextQuestion();
-    nextBtn.classList.remove('hide')
+    nextButton.classList.remove('hide')
 }
 
-function ShowQuestion(question) {
-    questionEl.innerText = questions.question
+function ShowQuestion(questions) {
+    questionElement.innerText = questions.question
     console.log(questions)
-    question.answers.forEach(answer => {
+    question.answers.foreach(answer => {
         var button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('btn')
@@ -96,14 +102,28 @@ function ShowQuestion(question) {
             button.dataset.correct = answer.correct
         }
         button.addEventListener('click', selectAnswer)
-        answerBtnsEl.appendChild(button)
+        answerButtonsElement.appendChild(button)
     })
 }
 
 function resetState() {
     clearStatusClass(document.body)
-    nextBtn.classList.add('hide')
-    while (answerBtnsEl.firstChild){
-        answerBtnsEl.removeChild(answerBtnsEl.firstChild)
+    nextButton.classList.add('hide')
+    while (answerButtonsElement.firstChild){
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
+}
+
+function questionsloop(questions) {
+    for (var i=0; i < questions.length; i ++);
+    questions.innerText('#question');
+    if (answer.correct) {
+        button.dataset.correct = answer.correct
+        score ++;
+    }
+    score.innerText('Correct')
+}
+
+function nextQuestion() {
+    ShowQuestion(shuffledQuestions[currentQuestionIndex]);
 }
